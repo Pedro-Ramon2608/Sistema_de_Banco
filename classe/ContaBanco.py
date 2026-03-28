@@ -1,5 +1,7 @@
 from time import sleep
 
+# *Lembrar de criar condições para depositos e saques, se são + ou -
+
 class ContaBancaria:
     """
 Cria uma conta bancária
