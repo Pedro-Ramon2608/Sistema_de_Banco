@@ -5,10 +5,27 @@ def leiaInt(num):
         try:
             entrada = int(input(num))
         except (ValueError, TypeError):
-            print('\033[1;91mERRO! Digite um número Inteiro válido.\033[m')
+            print('\nERRO! Digite um número Inteiro válido.')
             continue
         except KeyboardInterrupt:
-            print('\033[1;91m\nUsuário preferiu não digitar esse número.\033[m')
+            print('\nUsuário preferiu não digitar esse número.')
+            return 0
+        else:
+            return entrada
+        
+def leiaFloat(num):
+    while True:
+        try:
+            valor = input(num)
+            
+            valor = valor.replace(".", "").replace(",", ".")
+            
+            entrada = float(valor)
+        except (ValueError, TypeError):
+            print("\nERRO! Digite um número Real válido.")
+            continue
+        except KeyboardInterrupt:
+            print("\nUsuário preferiu não digitar um número.")
             return 0
         else:
             return entrada
@@ -27,6 +44,6 @@ def carregar_conta():
                 return None
 
             dados = conteudo.split(',')
-            return ContaBanco.ContaBancaria(dados[0], dados[1], float(dados[2]))
+            return ContaBanco.ContaBancaria(int(dados[0]), dados[1], float(dados[2]))
     except FileNotFoundError:
         return None

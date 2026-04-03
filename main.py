@@ -1,9 +1,9 @@
-from lib.funções import *
+from lib.funções import carregar_conta, salvar_saldo, leiaInt, leiaFloat
+from classe.ContaBanco import ContaBancaria
+import os
 
-if 'saldo.txt' != '':
-    pass
-else:
-    c1 = ContaBanco.ContaBancaria(112, "Pedro Ramon", 2500)
+if not os.path.exists("saldo.txt"):
+    c1 = ContaBancaria(112, "Pedro Ramon", 2500)
     salvar_saldo(c1)
 
 c1 = carregar_conta()
@@ -21,11 +21,11 @@ Sua opção: ''')
     if opcao == 1:
         print(c1)
     elif opcao == 2:
-        saque = float(input("Digite o valor que deseja sacar: "))
+        saque = leiaFloat("Digite o valor que deseja sacar: R$")
         c1.sacar(saque)
         salvar_saldo(c1)
     elif opcao == 3:
-        deposito = float(input("Digite o valor que deseja depositar: "))
+        deposito = leiaFloat("Digite o valor que deseja depositar: R$")
         c1.depositar(deposito)
         salvar_saldo(c1)
     elif opcao == 4:

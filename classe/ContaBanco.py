@@ -14,15 +14,20 @@ Cria uma conta bancária
         sleep(1)
 
     def sacar(self, valor):
-        if valor > self.saldo:
+        if valor <= 0:
+             print(f"Saque inválido.")
+        elif valor > self.saldo:
             print(f"Saque RECUSADO! Tentativa de  Saque: R${valor:,.2f}. Saldo: R${self.saldo:,.2f}")
         else:
             self.saldo -= valor
             print(f"Saque de R${valor:,.2f} realizado na conta {self.id}")
 
     def depositar(self, valor):
-            self.saldo += valor
-            print(f"Deposito de R${valor:,.2f} realizado na conta {self.id}")
+            if valor <= 0:
+                 print(f"Deposito inválido.")
+            else:
+                self.saldo += valor
+                print(f"Deposito de R${valor:,.2f} realizado na conta {self.id}")
 
 
     def __str__(self):
