@@ -3,6 +3,7 @@
 🏦 Sistema Bancário Python (CLI)
 Um sistema de gerenciamento de conta bancária desenvolvido em Python, utilizando Programação Orientada a Objetos (POO) e persistência de dados em arquivos de texto. O projeto foca na modularização e no tratamento robusto de entradas do usuário.
 
+#
 🚀 Funcionalidades
 
 * Persistência de Dados: O saldo e os dados da conta são salvos em um arquivo saldo.txt, permitindo que as informações não sejam perdidas ao fechar o programa.
@@ -13,6 +14,7 @@ Um sistema de gerenciamento de conta bancária desenvolvido em Python, utilizand
 
 * Interface Amigável: Menu interativo via terminal com feedback em tempo real das operações.
 
+#
 🛠️ Tecnologias e Conceitos
 
 * Python 3.12
@@ -25,7 +27,7 @@ Um sistema de gerenciamento de conta bancária desenvolvido em Python, utilizand
 
 * Tratamento de Exceções: Uso extensivo de try/except para garantir a resiliência do sistema.
 
-
+#
 📂 Estrutura do Projeto
 
   ├── main.py              # Ponto de entrada que executa o loop principal
@@ -45,6 +47,7 @@ Um sistema de gerenciamento de conta bancária desenvolvido em Python, utilizand
   └── README.md            # Documentação do projeto
 
 
+#
 🔧 Como executar
 1. Clone este repositório:
 
@@ -64,6 +67,7 @@ Bash
 
 python main.py
 
+#
 📝 Exemplo de Uso
 
 Ao iniciar, o sistema verifica se existe um arquivo de saldo. Caso não exista, ele cria uma conta padrão para demonstração. O usuário pode então:
@@ -72,6 +76,7 @@ Ver Saldo: Exibe os dados formatados do titular e o saldo atual.
 
 Sacar/Depositar: Digitar valores (aceita vírgula ou ponto) que são processados e salvos automaticamente.
 
+#
 Objetvos:
 - [x] Lógica de Saque e Depósito
 - [x] Persistência em .txt
