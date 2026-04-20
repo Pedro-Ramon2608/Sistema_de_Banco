@@ -1,6 +1,5 @@
-from time import sleep
+# Integrar o banco de dados 
 
-# *Lembrar de criar condições para depositos e saques, se são + ou -
 
 class ContaBancaria:
     """
@@ -11,7 +10,6 @@ Cria uma conta bancária
         self.titular = nome
         self.saldo = saldo
         print(f"Acessando a conta {self.id} de {self.titular}...")
-        sleep(1)
 
     def sacar(self, valor):
         if valor <= 0:

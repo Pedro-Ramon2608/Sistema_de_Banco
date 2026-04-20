@@ -1,4 +1,4 @@
-from classe import ContaBanco
+from sistemadebanco import models
 
 def leiaInt(num):
     while True:
@@ -44,6 +44,6 @@ def carregar_conta():
                 return None
 
             dados = conteudo.split(',')
-            return ContaBanco.ContaBancaria(int(dados[0]), dados[1], float(dados[2]))
+            return models.ContaBancaria(int(dados[0]), dados[1], float(dados[2]))
     except FileNotFoundError:
         return None
